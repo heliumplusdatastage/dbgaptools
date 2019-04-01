@@ -3,22 +3,6 @@
 import pandas as pd
 import xml.etree.ElementTree as ET
 
-
-def count_hdr_lines(filename, colname):
-    with open(filename, 'r') as con:
-        header_count = 0
-        for line in con:
-            raw_line = line.rstrip("\n")
-            r_line = raw_line.strip().split("\t")
-            header_count = header_count + 1
-            for col in colname:
-                if col in r_line:
-                    break
-                else:
-                    continue
-        print(header_count)
-
-
 def read_dd_xml(filename):
     # Set parent_dd_file to the filename of the XML data dictionary on disk
     xml_dd = ET.parse(filename)
@@ -98,10 +82,8 @@ def read_dd_xml(filename):
     ordered_dd = pd.concat([ordered_dd, dd], axis=1, sort=False)
     return ordered_dd
 
-
-#result = read_dd_xml('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\sample.xml')
-#pd.set_option('expand_frame_repr', False)
-#pd.set_option('display.max_columns', 999)
-#print(result)
-
-result1 = count_hdr_lines('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\sam_text.txt',["IS_TUMOR"])
+# Give the path to the filename on disk
+result = read_dd_xml('/path/to/file/on/disk')
+pd.set_option('expand_frame_repr', False)
+pd.set_option('display.max_columns', 999)
+print(result)
