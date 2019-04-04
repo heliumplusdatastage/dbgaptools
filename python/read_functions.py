@@ -1,7 +1,71 @@
 # from lxml import etree
 # import numpy as np
+import os
 import pandas as pd
 import xml.etree.ElementTree as ET
+import re
+
+
+def count_hdr_lines(filename, colname=None):
+    nskip = 0
+    # done = False
+    with open(filename, "r") as lines:
+        for tmp in lines:
+            chkname = False
+            if colname is not None:
+                for col in colname:
+                    chkname = not re.search(col, tmp)
+            r_tmp = tmp.rstrip("\n").split("\t")
+            if r_tmp[:1][0][0] == "#" or r_tmp[1:2] == [""] or chkname:
+                nskip = nskip + 1
+            else:
+                break
+    return nskip
+
+
+# Read data dictionary files(.txt, .xlsx, .xls and .xml) and converts into a pandas dataframe.
+def read_dd_file(filename, remove_empty_row=True, remove_empty_column=False):
+
+    allowed_text_exts = [".txt"]
+    allowed_xls_exts = [".xlsx", ".xls"]
+    allowed_xml_exts = [".xml"]
+
+    allowed_exts = allowed_text_exts + allowed_xls_exts + allowed_xml_exts
+    print(allowed_exts)
+
+    file_name, file_extension = os.path.splitext(filename)
+
+    if file_extension not in allowed_exts:
+        print("Expected tab-delimited or Excel input file, not %s" % file_extension)
+        exit
+    try:
+        if file_extension in allowed_exts:
+            ordered_dd = read_dd_xml(filename)
+        elif file_extension in allowed_exts:
+            pass
+            # read_dd_text(filename)
+        elif file_extension in allowed_exts:
+            # read_dd_xls(filename)
+            pass
+        else:
+            raise Exception
+
+    except Exception as e:
+        print("in reading file", filename)
+        print(e)
+
+    pd.set_option('expand_frame_repr', False)
+    pd.set_option('display.max_columns', 999)
+
+    if remove_empty_row:
+        dd = ordered_dd.dropna(how="all")
+        print(dd)
+
+    if remove_empty_column:
+        dd = ordered_dd.dropna(axis="columns", how="all")
+        print(dd)
+    return dd
+
 
 def read_dd_xml(filename):
     # Set parent_dd_file to the filename of the XML data dictionary on disk
@@ -82,8 +146,9 @@ def read_dd_xml(filename):
     ordered_dd = pd.concat([ordered_dd, dd], axis=1, sort=False)
     return ordered_dd
 
-# Give the path to the filename on disk
-result = read_dd_xml('/path/to/file/on/disk')
-pd.set_option('expand_frame_repr', False)
-pd.set_option('display.max_columns', 999)
-print(result)
+
+# result = read_dd_file('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\sample.xml', True, True)
+# pd.set_option('expand_frame_repr', False)
+# pd.set_option('display.max_columns', 999)
+result1 = count_hdr_lines('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\sample_hasheader.txt',
+                          colname=["DOCFILE"])
