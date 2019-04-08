@@ -213,11 +213,11 @@ def read_dd_xml(filename):
     return ordered_dd
 
 
-result_1 = read_dd_file('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\samplexls_hasheader.xlsx')
-result_2 = read_dd_file('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\sample_xml.data_dict.xml')
+result_1 = read_dd_file('/path/to/samplexls_hasheader.xlsx')
+result_2 = read_dd_file('/path/to/sample_xml.data_dict.xml')
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_columns', 999)
-result_3 = read_dd_file('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\sample_hasheader.txt')
-#print(result_1)
-#print(result_2)
+result_3 = read_dd_file('/path/to/sample_hasheader.txt')
+print(result_1)
+print(result_2)
 print(result_3)
