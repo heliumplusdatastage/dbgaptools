@@ -6,6 +6,7 @@ import xml.etree.ElementTree as ET
 import re
 
 
+# Count the number of headlines. Return the integer value.
 def count_hdr_lines(filename, colname=None):
     nskip = 0
     # done = False
@@ -13,14 +14,55 @@ def count_hdr_lines(filename, colname=None):
         for tmp in lines:
             chkname = False
             if colname is not None:
+                # Check for the column on the line. If exists, make chkname True
                 for col in colname:
                     chkname = not re.search(col, tmp)
+            print(chkname)
             r_tmp = tmp.rstrip("\n").split("\t")
+            # Check for lines which starts with #.
             if r_tmp[:1][0][0] == "#" or r_tmp[1:2] == [""] or chkname:
                 nskip = nskip + 1
             else:
                 break
     return nskip
+
+
+def read_ds_file(filename, dd=False, na_vals=["NA", "N/A", "na", "n/a"],
+                 remove_empty_row=True, remove_empty_col=False):
+    if not os.path.isfile(filename):
+        return None
+
+    # exit if file extension indicates other than .txt (e.g., csv, xlsx)
+    ext = os.path.splitext(filename)[1]
+    if ext != ".txt":
+        print("Expected tab-delimited input file (.txt), not " + ext)
+        return None
+
+    # add name of file to error message in case of failure
+    try:
+        # may be comment characters in the data fields. first decide how many lines to skip
+        if not dd:
+            nskip = count_hdr_lines(filename)
+        elif dd:
+            nskip = count_hdr_lines(filename, colname="VARNAME")
+
+        if nskip > 0:
+            print("Additional rows are present before column headers and should be removed prior to dbGaP submission")
+
+        data = pd.read_csv(filename, delimiter='\t', comment='#', keep_default_na=False, na_values=na_vals,
+                           skiprows=nskip)
+
+        # remove rows with all blanks/NAs
+        if remove_empty_row:
+            data = data.dropna(how='all')
+        # remove columns with all blanks/NAs (FALSE by default - removes too many DD cols)
+        if remove_empty_col:
+            data = data.dropna(axis=1, how='all')
+    except Exception as e:
+        print("in reading file" + filename + ":")
+        print(e)
+
+    return data
 
 
 # Read data dictionary files(.txt, .xlsx, .xls and .xml) and converts into a pandas dataframe.
@@ -31,22 +73,18 @@ def read_dd_file(filename, remove_empty_row=True, remove_empty_column=False):
     allowed_xml_exts = [".xml"]
 
     allowed_exts = allowed_text_exts + allowed_xls_exts + allowed_xml_exts
-    print(allowed_exts)
-
     file_name, file_extension = os.path.splitext(filename)
 
     if file_extension not in allowed_exts:
         print("Expected tab-delimited or Excel input file, not %s" % file_extension)
         exit
     try:
-        if file_extension in allowed_exts:
+        if file_extension in allowed_xml_exts:
             ordered_dd = read_dd_xml(filename)
-        elif file_extension in allowed_exts:
-            pass
-            # read_dd_text(filename)
-        elif file_extension in allowed_exts:
-            # read_dd_xls(filename)
-            pass
+        elif file_extension in allowed_text_exts:
+            ordered_dd = read_dd_txt(filename)
+        elif file_extension in allowed_xls_exts:
+            ordered_dd = read_dd_xls(filename)
         else:
             raise Exception
 
@@ -59,11 +97,36 @@ def read_dd_file(filename, remove_empty_row=True, remove_empty_column=False):
 
     if remove_empty_row:
         dd = ordered_dd.dropna(how="all")
-        print(dd)
 
     if remove_empty_column:
         dd = ordered_dd.dropna(axis="columns", how="all")
-        print(dd)
+    return dd
+
+
+def read_dd_txt(filename):
+    dd = read_ds_file(filename, dd=True)
+
+    # rename extra columns after VALUES as "X__*"
+    columns = list(dd.columns)
+    try:
+        index = columns.index("VALUES")
+        for i in range(index + 1, len(columns)):
+            columnname = "X__" + str(i - index)
+            columns[i] = columnname
+        dd.columns = columns
+    except Exception as _:
+        pass
+
+    return dd
+
+
+def read_dd_xls(filename):
+    xl = pd.ExcelFile(filename)
+
+    # check if there are multiple sheets
+    if len(xl.sheet_names) > 1:
+        print("Data dictionary Excel contaiins mulitple sheets; assuming first is the DD")
+    dd = xl.parse()
     return dd
 
 
@@ -98,7 +161,10 @@ def read_dd_xml(filename):
         # Search for required nodes on each variable node and add them to the df dictionary.
         for key, value in required_nodes.items():
             xpath = './/%s' % value
-            text = variable_node.find(xpath).text
+            try:
+                text = variable_node.find(xpath).text
+            except Exception as _:
+                text = variable_node.find(xpath)
             df[key] = text
 
         # Search for optional nodes on each variable node and add them to the df dictionary.
@@ -147,8 +213,11 @@ def read_dd_xml(filename):
     return ordered_dd
 
 
-# result = read_dd_file('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\sample.xml', True, True)
-# pd.set_option('expand_frame_repr', False)
-# pd.set_option('display.max_columns', 999)
-result1 = count_hdr_lines('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\sample_hasheader.txt',
-                          colname=["DOCFILE"])
+result_1 = read_dd_file('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\samplexls_hasheader.xlsx')
+result_2 = read_dd_file('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\sample_xml.data_dict.xml')
+pd.set_option('expand_frame_repr', False)
+pd.set_option('display.max_columns', 999)
+result_3 = read_dd_file('C:\\Users\mural\PycharmProjects\dbGaPDataDictionaryParser\sample_hasheader.txt')
+#print(result_1)
+#print(result_2)
+print(result_3)
