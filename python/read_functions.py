@@ -17,7 +17,6 @@ def count_hdr_lines(filename, colname=None):
                 # Check for the column on the line. If exists, make chkname True
                 for col in colname:
                     chkname = not re.search(col, tmp)
-            print(chkname)
             r_tmp = tmp.rstrip("\n").split("\t")
             # Check for lines which starts with #.
             if r_tmp[:1][0][0] == "#" or r_tmp[1:2] == [""] or chkname:
