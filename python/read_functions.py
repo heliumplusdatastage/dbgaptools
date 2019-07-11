@@ -119,7 +119,6 @@ def read_dd_txt(filename):
 
     return dd
 
-
 def read_dd_xls(filename):
     xl = pd.ExcelFile(filename)
 
@@ -127,6 +126,22 @@ def read_dd_xls(filename):
     if len(xl.sheet_names) > 1:
         print("Data dictionary Excel contaiins mulitple sheets; assuming first is the DD")
     dd = xl.parse()
+
+    # Identify if first row was not column headers
+    colnames = [x.upper() for x in dd.columns]
+    if "VARNAME" not in colnames:
+        # Find header row if preceded by comments
+        print("Additional rows are present before column headers and should be removed prior to dbGaP submission")
+
+        # Check to see if 'VARNAME' is contained in any rows
+        def is_header_row(row):
+            return "VARNAME" in [str(x).upper() for x in list(row)]
+        header_tests = dd.apply(is_header_row, axis=1)
+
+        # Re-parse and skip all rows before header line
+        header_row = list(header_tests).index(True)
+        dd = xl.parse(header=header_row+1)
+
     return dd
 
 
@@ -211,13 +226,3 @@ def read_dd_xml(filename):
     # Concatenates the left over columns on dd dataframe to the ordered_dd dataframe. Return the ordered dataframe.
     ordered_dd = pd.concat([ordered_dd, dd], axis=1, sort=False)
     return ordered_dd
-
-
-result_1 = read_dd_file('/path/to/samplexls_hasheader.xlsx')
-result_2 = read_dd_file('/path/to/sample_xml.data_dict.xml')
-pd.set_option('expand_frame_repr', False)
-pd.set_option('display.max_columns', 999)
-result_3 = read_dd_file('/path/to/sample_hasheader.txt')
-print(result_1)
-print(result_2)
-print(result_3)
