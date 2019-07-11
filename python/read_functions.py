@@ -4,7 +4,9 @@ import os
 import pandas as pd
 import xml.etree.ElementTree as ET
 import re
+import logging
 
+import constants as const
 
 # Count the number of headlines. Return the integer value.
 def count_hdr_lines(filename, colname=None):
@@ -24,7 +26,6 @@ def count_hdr_lines(filename, colname=None):
             else:
                 break
     return nskip
-
 
 def read_ds_file(filename, dd=False, na_vals=["NA", "N/A", "na", "n/a"],
                  remove_empty_row=True, remove_empty_col=False):
@@ -63,7 +64,6 @@ def read_ds_file(filename, dd=False, na_vals=["NA", "N/A", "na", "n/a"],
 
     return data
 
-
 # Read data dictionary files(.txt, .xlsx, .xls and .xml) and converts into a pandas dataframe.
 def read_dd_file(filename, remove_empty_row=True, remove_empty_column=False):
 
@@ -100,7 +100,6 @@ def read_dd_file(filename, remove_empty_row=True, remove_empty_column=False):
     if remove_empty_column:
         dd = ordered_dd.dropna(axis="columns", how="all")
     return dd
-
 
 def read_dd_txt(filename):
     dd = read_ds_file(filename, dd=True)
@@ -143,7 +142,6 @@ def read_dd_xls(filename):
 
     return dd
 
-
 def read_dd_xml(filename):
     # Set parent_dd_file to the filename of the XML data dictionary on disk
     xml_dd = ET.parse(filename)
@@ -153,16 +151,16 @@ def read_dd_xml(filename):
 
     # Create a one-line data frame for each variable node
     required_nodes = {
-        'VARNAME': 'name',
-        'VARDESC': 'description'
+        const.VARNAME_FIELD: 'name',
+        const.VARDESC_FIELD: 'description'
     }
 
     # Process some optional nodes; others are ignored
     optional_nodes = {
-        'TYPE': 'type',
-        'UNITS': 'unit',
-        'MIN': 'logical_min',
-        'MAX': 'logical_max'
+        const.TYPE_FIELD: 'type',
+        const.UNITS_FIELD: 'unit',
+        const.MIN_FIELD: 'logical_min',
+        const.MAX_FIELD: 'logical_max'
     }
 
     # unique_keys = xml_dd.findall('unique_key')
@@ -188,10 +186,93 @@ def read_dd_xml(filename):
             if node is not None:
                 df[key] = node.text
 
-        # if len(unique_keys) > 0:
-        #     for value in unique_keys:
-        #         if df['VARNAME'] == value.text:
-        #             df['UNIQUEKEY'] = 'X'
+        # Find all the value nodes in each variable node. If it has multiple value nodes. Value with index 0 - VALUES
+        # Value with index 1 - X__1
+        child_value_nodes = variable_node.findall('.//value')
+        for index, value in enumerate(child_value_nodes):
+            try:
+                value_string = str(value.attrib['code']) + '=' + value.text
+                if index == 0:
+                    name_string = const.VALUES_FIELD
+                else:
+                    name_string = 'X__' + str(index)
+                df[name_string] = value_string
+            except Exception as _:
+                pass
+
+        # Append the df dictionary of each variable node to the df list.
+        df_list.append(df)
+
+    # Create a dataframe from the df list.
+    dd = pd.DataFrame(df_list)
+
+    required_column_order = [const.VARNAME_FIELD, const.VARDESC_FIELD, const.TYPE_FIELD, const.UNITS_FIELD,
+                             const.MIN_FIELD, const.MAX_FIELD, const.UNIQUE_KEY_FIELD, const.VALUES_FIELD]
+
+    # Arrange the dataframe columns in a specific order.
+    ordered_dd = pd.DataFrame()
+    for value in required_column_order:
+        if value in dd.columns:
+            ordered_dd[value] = dd[value]
+            dd.pop(value)
+
+    # Concatenates the left over columns on dd dataframe to the ordered_dd dataframe. Return the ordered dataframe.
+    ordered_dd = pd.concat([ordered_dd, dd], axis=1, sort=False)
+    return ordered_dd
+
+def read_dbgap_dd_xml(filename):
+    # Set parent_dd_file to the filename of the XML data dictionary on disk
+    logging.info("Parsing DbGaP data dictionary from XML file: {0}".format(filename))
+    xml_dd = ET.parse(filename)
+
+    # Get dataset, study, participant set ids
+    dataset_node = xml_dd.findall('.')[0]
+    dataset_id = dataset_node.attrib['id']
+    study_id = dataset_node.attrib['study_id']
+    participant_set_id = dataset_node.attrib['participant_set']
+
+    # Get dataset description
+    dataset_desc = dataset_node.find("./description").text if dataset_node.find("./description") is not None else None
+
+    # Select variable nodes
+    variable_nodes = xml_dd.findall('variable')
+
+    # Create a one-line data frame for each variable node
+    required_nodes = {
+        const.VARNAME_FIELD: 'name',
+        const.VARDESC_FIELD: 'description'
+    }
+
+    # Process some optional nodes; others are ignored
+    optional_nodes = {
+        const.TYPE_FIELD: 'type',
+        const.UNITS_FIELD: 'unit',
+        const.MIN_FIELD: 'logical_min',
+        const.MAX_FIELD: 'logical_max'
+    }
+
+    df_list = []
+    for variable_node in variable_nodes:
+        df = {}
+
+        # Get variable accession number
+        variable_id = variable_node.attrib['id']
+
+        # Search for required nodes on each variable node and add them to the df dictionary.
+        for key, value in required_nodes.items():
+            xpath = './/%s' % value
+            try:
+                text = variable_node.find(xpath).text
+            except Exception as _:
+                text = variable_node.find(xpath)
+            df[key] = text
+
+        # Search for optional nodes on each variable node and add them to the df dictionary.
+        for key, value in optional_nodes.items():
+            xpath = './/%s' % value
+            node = variable_node.find(xpath)
+            if node is not None:
+                df[key] = node.text
 
         # Find all the value nodes in each variable node. If it has multiple value nodes. Value with index 0 - VALUES
         # Value with index 1 - X__1
@@ -207,17 +288,24 @@ def read_dd_xml(filename):
             except Exception as _:
                 pass
 
+        # Add dataset, study, variable accession numbers
+        df[const.DATASET_ACC_FIELD] = dataset_id
+        df[const.STUDY_ACC_FIELD] = study_id
+        df[const.VARIABLE_ACC_FIELD] = variable_id
+
+        # Add participant set and dataset desc fields
+        df[const.DATASET_PART_SET_FIELD] = participant_set_id
+        df[const.DATASET_DESC_FIELD] = dataset_desc
+
         # Append the df dictionary of each variable node to the df list.
         df_list.append(df)
 
     # Create a dataframe from the df list.
     dd = pd.DataFrame(df_list)
 
-    required_column_order = ['VARNAME', 'VARDESC', 'TYPE', 'UNITS', 'MIN', 'MAX', 'UNIQUEKEY', 'VALUES']
-
     # Arrange the dataframe columns in a specific order.
     ordered_dd = pd.DataFrame()
-    for value in required_column_order:
+    for value in const.READ_DBGAP_COLUMN_ORDER:
         if value in dd.columns:
             ordered_dd[value] = dd[value]
             dd.pop(value)
