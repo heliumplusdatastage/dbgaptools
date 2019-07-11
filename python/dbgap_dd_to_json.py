@@ -38,6 +38,7 @@ def configure_logging(verbosity):
         logging.addLevelName(logging.DEBUG, "DATA_DICT_TO_JSON_DEBUG")
 
     # Setting the level of the logs
+    verbosity = 3 if verbosity > 0 else verbosity
     level = [logging.ERROR, logging.WARNING, logging.INFO, logging.DEBUG][verbosity]
     logging.getLogger().setLevel(level)
 
