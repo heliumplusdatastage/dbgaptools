@@ -13,7 +13,11 @@ Repo: **heliumdatastage/dbgap_dd_to_json:latest**
 Docker endpoint automatically calls dbgap_dd_to_json.py script so no need to type further commands. 
 For basic usage and help messages:
         
-    docker run -v "/path/to/dbGaP_DDs/:/data" heliumdatastage/dbgap_dd_to_json:latest --help
+    docker run -v "/path/to/dbGaP_DDs/:/data" heliumdatastage/dbgap_dd_to_json:<tag> --help
+    
+NOTE: **tag** is not an actual tag! 
+
+Image tags are created using the 6-digit github hash from the commit used to generate the image. For a list of recent image tags, visit the [dbgap_dd_to_json docker hub repo](https://cloud.docker.com/u/heliumdatastage/repository/docker/heliumdatastage/dbgap_dd_to_json).
     
 Usage overview:
 
