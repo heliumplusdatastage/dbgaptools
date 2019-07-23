@@ -7,6 +7,7 @@ import json
 # User libraries
 from read_functions import read_dbgap_dd_xml
 from write_functions import dbgap_dd_to_json
+from check_functions import check_dd
 import constants as const
 
 
@@ -105,10 +106,14 @@ def main():
     # Parse data dictionary into Pandas dataframe
     data_df = read_dbgap_dd_xml(input_dd)
 
+    # Check data dictionary structure
+    check_dd(data_df,
+             required_cols=const.REQUIRED_JSON_COLS,
+             optional_cols=const.OPTIONAL_JSON_COLS)
+
     # Convert to reformatted JSON with required columns
     dd_out = dbgap_dd_to_json(data_df,
-                              required_cols=const.REQUIRED_JSON_COLS,
-                              optional_cols=const.OPTIONAL_JSON_COLS,
+                              output_cols=const.REQUIRED_JSON_COLS + const.OPTIONAL_JSON_COLS,
                               missing_val_char=const.MISSING_DATA_VALUE)
 
     # Write to output file
