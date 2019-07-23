@@ -1,0 +1,2352 @@
+[
+    {
+        "VARIABLE_ACC": "phv00000029.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "agecont",
+        "VARDESC": "Age at last participant contact (in person or via telephone)",
+        "UNITS": "year",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00020783.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "agedraw",
+        "VARDESC": "Age at time of blood draw",
+        "UNITS": "year",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000027.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "agephot",
+        "VARDESC": "Age at last photograph",
+        "UNITS": "year",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000025.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "agequal",
+        "VARDESC": "Age at the qualifying visit",
+        "UNITS": "year",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000026.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "agerand",
+        "VARDESC": "Age at the randomization (1-4 months after the qualifying visit)",
+        "UNITS": "year",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000028.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "agevis",
+        "VARDESC": "Age (of person) at last visit to clinic",
+        "UNITS": "year",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000173.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "amdstat",
+        "VARDESC": "AMD status",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000136.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina00",
+        "VARDESC": "History of angina (at follow-up year 0)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000137.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina03",
+        "VARDESC": "History of angina (at follow-up year 3)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000138.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina04",
+        "VARDESC": "History of angina (at follow-up year 4)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000139.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina05",
+        "VARDESC": "History of angina (at follow-up year 5)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000140.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina06",
+        "VARDESC": "History of angina (at follow-up year 6)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000141.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina07",
+        "VARDESC": "History of angina (at follow-up year 7)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000142.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina08",
+        "VARDESC": "History of angina (at follow-up year 8)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000143.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina09",
+        "VARDESC": "History of angina (at follow-up year 9)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000144.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina10",
+        "VARDESC": "History of angina (at follow-up year 10)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000145.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina11",
+        "VARDESC": "History of angina (at follow-up year 11)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000146.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina12",
+        "VARDESC": "History of angina (at follow-up year 12)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000147.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "angina13",
+        "VARDESC": "History of angina (at follow-up year 13)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000148.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp00",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 0)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000149.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp03",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 3)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000150.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp04",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 4)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000151.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp05",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 5)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000152.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp06",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 6)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000153.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp07",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 7)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000154.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp08",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 8)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000155.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp09",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 9)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000156.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp10",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 10)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000157.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp11",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 11)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000158.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp12",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 12)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000159.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "asp13",
+        "VARDESC": "Aspirin use over 5x a week for at least 3 months (at follow-up year 13)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Never",
+            "1": "<5 years",
+            "2": ">",
+            "3": ">",
+            "4": ">"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000160.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur00",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 0)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000161.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur03",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 3)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000162.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur04",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 4)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000163.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur05",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 5)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000164.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur06",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 6)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000165.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur07",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 7)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000166.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur08",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 8)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000167.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur09",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 9)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000168.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur10",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 10)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000169.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur11",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 11)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000170.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur12",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 12)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000171.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "aspcur13",
+        "VARDESC": "Currently taking aspirin regularly (at follow-up year 13)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000060.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi00",
+        "VARDESC": "Body-mass index (at follow-up year 0)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000061.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi03",
+        "VARDESC": "Body-mass index (at follow-up year 3)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000062.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi04",
+        "VARDESC": "Body-mass index (at follow-up year 4)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000063.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi05",
+        "VARDESC": "Body-mass index (at follow-up year 5)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000064.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi06",
+        "VARDESC": "Body-mass index (at follow-up year 6)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000065.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi07",
+        "VARDESC": "Body-mass index (at follow-up year 7)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000066.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi08",
+        "VARDESC": "Body-mass index (at follow-up year 8)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000067.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi09",
+        "VARDESC": "Body-mass index (at follow-up year 9)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000068.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi10",
+        "VARDESC": "Body-mass index (at follow-up year 10)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000069.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi11",
+        "VARDESC": "Body-mass index (at follow-up year 11)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000070.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi12",
+        "VARDESC": "Body-mass index (at follow-up year 12)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000071.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "bmi13",
+        "VARDESC": "Body-mass index (at follow-up year 13)",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000122.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer00",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 0)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000123.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer01",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 1)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000124.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer02",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 2)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000125.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer03",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 3)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000126.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer04",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 4)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000127.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer05",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 5)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000128.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer06",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 6)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000129.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer07",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 7)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000130.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer08",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 8)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000131.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer09",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 9)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000132.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer10",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 10)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000133.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer11",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 11)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000134.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer12",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 12)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000135.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cancer13",
+        "VARDESC": "History of cancer (in follow-up, only newly developed cancers were documented) (at follow-up year 13)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000015.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cataract",
+        "VARDESC": "Cataract phenotype",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Absent",
+            "10": "Questionable",
+            "2": "Nuclear alone",
+            "3": "Cortical alone",
+            "4": "PSC alone",
+            "5": "Nuclear/Cortical",
+            "6": "Nuclear/PSC",
+            "7": "Cortical/PSC",
+            "8": "Nuclear/Cortical/PSC",
+            "9": "Cataract Surgery/No specific type"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000172.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "CNTRMTAK",
+        "VARDESC": "Centrum use",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000002.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "consent",
+        "VARDESC": "Participant's consent status",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Participant consents to any study",
+            "2": "Participant consents only to studies of AMD and cataract"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000021.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "cor",
+        "VARDESC": "Cortical opacity phenotype",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Absent",
+            "1": "Present",
+            "2": "Cataract Surgery",
+            "3": "Questionable"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000108.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab00",
+        "VARDESC": "History of diabetes (at follow-up year 0)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000109.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab01",
+        "VARDESC": "History of diabetes (at follow-up year 1)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000110.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab02",
+        "VARDESC": "History of diabetes (at follow-up year 2)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000111.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab03",
+        "VARDESC": "History of diabetes (at follow-up year 3)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000112.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab04",
+        "VARDESC": "History of diabetes (at follow-up year 4)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000113.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab05",
+        "VARDESC": "History of diabetes (at follow-up year 5)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000114.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab06",
+        "VARDESC": "History of diabetes (at follow-up year 6)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000115.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab07",
+        "VARDESC": "History of diabetes (at follow-up year 7)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000116.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab08",
+        "VARDESC": "History of diabetes (at follow-up year 8)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000117.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab09",
+        "VARDESC": "History of diabetes (at follow-up year 9)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000118.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab10",
+        "VARDESC": "History of diabetes (at follow-up year 10)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000119.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab11",
+        "VARDESC": "History of diabetes (at follow-up year 11)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000120.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab12",
+        "VARDESC": "History of diabetes (at follow-up year 12)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000121.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "diab13",
+        "VARDESC": "History of diabetes (at follow-up year 13)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "N": "no",
+            "Y": "yes"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000096.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias00",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 0)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000097.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias03",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 3)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000098.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias04",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 4)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000099.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias05",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 5)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000100.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias06",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 6)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000101.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias07",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 7)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000102.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias08",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 8)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000103.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias09",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 9)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000104.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias10",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 10)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000105.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias11",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 11)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000106.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias12",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 12)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000107.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "dias13",
+        "VARDESC": "Sitting diastolic blood pressure (at follow-up year 13)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000036.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height00",
+        "VARDESC": "Height in inches (at follow-up year 0)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000037.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height03",
+        "VARDESC": "Height in inches (at follow-up year 3)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000038.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height04",
+        "VARDESC": "Height in inches (at follow-up year 4)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000039.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height05",
+        "VARDESC": "Height in inches (at follow-up year 5)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000040.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height06",
+        "VARDESC": "Height in inches (at follow-up year 6)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000041.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height07",
+        "VARDESC": "Height in inches (at follow-up year 7)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000042.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height08",
+        "VARDESC": "Height in inches (at follow-up year 8)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000043.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height09",
+        "VARDESC": "Height in inches (at follow-up year 9)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000044.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height10",
+        "VARDESC": "Height in inches (at follow-up year 10)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000045.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height11",
+        "VARDESC": "Height in inches (at follow-up year 11)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000046.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height12",
+        "VARDESC": "Height in inches (at follow-up year 12)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000047.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "height13",
+        "VARDESC": "Height in inches (at follow-up year 13)",
+        "UNITS": "inch",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000020.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "lcor",
+        "VARDESC": "Cortical opacity phenotype - left eye",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "COR-A": "Absent",
+            "COR-B": "Present",
+            "COR-C": "Surgery",
+            "COR-D": "Questionable"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000008.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "lcorbase",
+        "VARDESC": "Baseline cortical opacity percentage (full visible lens) - left eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000010.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "lcorscore",
+        "VARDESC": "Predicted cortical opacity percentage (full visible lens) - left eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000017.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "lnuc",
+        "VARDESC": "Nuclear opacity phenotype - left eye",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "NUC-A": "Absent",
+            "NUC-B": "Present",
+            "NUC-C": "Surgery",
+            "NUC-D": "Questionable"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000004.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "lnucbase",
+        "VARDESC": "Baseline nuclear opacity score - left eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000006.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "lnucscore",
+        "VARDESC": "Predicted nuclear opacity score - left eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000023.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "Lpsc",
+        "VARDESC": "PSC opacity phenotype - left eye",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "PSC-A": "Absent",
+            "PSC-B": "Present",
+            "PSC-C": "Surgery",
+            "PSC-D": "Questionable"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000012.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "lpscbase",
+        "VARDESC": "Baseline PSC opacity percentage (central 5 mm) - left eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000014.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "lpscscore",
+        "VARDESC": "Predicted PSC opacity percentage (central 5 mm) - left eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000032.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "MARITAL",
+        "VARDESC": "Marital status",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "married",
+            "2": "divorced/separated",
+            "3": "widowed",
+            "4": "never married"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000018.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "nuc",
+        "VARDESC": "Nuclear opacity phenotype",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Absent",
+            "1": "Present",
+            "2": "Cataract Surgery",
+            "3": "Questionable"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000024.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "Psc",
+        "VARDESC": "PSC opacity phenotype",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "Absent",
+            "1": "Present",
+            "2": "Cataract Surgery",
+            "3": "Questionable"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000033.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "RACE",
+        "VARDESC": "Race",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "white,non-hispanic",
+            "2": "black, non-hispanic",
+            "3": "hispanic",
+            "4": "Asian or Pacific Islander",
+            "5": "other"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000019.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "rcor",
+        "VARDESC": "Cortical opacity phenotype - right eye",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "COR-A": "Absent",
+            "COR-B": "Present",
+            "COR-C": "Surgery",
+            "COR-D": "Questionable"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000007.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "rcorbase",
+        "VARDESC": "Baseline cortical opacity percentage (full visible lens) - right eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000009.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "rcorscore",
+        "VARDESC": "Predicted cortical opacity percentage (full visible lens) - right eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000016.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "rnuc",
+        "VARDESC": "Nuclear opacity phenotype - right eye",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "NUC-A": "Absent",
+            "NUC-B": "Present",
+            "NUC-C": "Surgery",
+            "NUC-D": "Questionable"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000003.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "rnucbase",
+        "VARDESC": "Baseline nuclear opacity score - right eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000005.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "rnucscore",
+        "VARDESC": "Predicted nuclear opacity score - right eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000022.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "rpsc",
+        "VARDESC": "PSC opacity phenotype - right eye",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "PSC-A": "Absent",
+            "PSC-B": "Present",
+            "PSC-C": "Surgery",
+            "PSC-D": "Questionable"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000011.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "rpscbase",
+        "VARDESC": "Baseline PSC opacity percentage (central 5 mm) - right eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000013.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "rpscscore",
+        "VARDESC": "Predicted PSC opacity percentage (central 5 mm) - right eye",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000035.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "SCHOOL",
+        "VARDESC": "Highest level of school completed",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "grade 11 or less",
+            "2": "high school graduate",
+            "3": "some college or associate degree",
+            "4": "bachelors degree",
+            "5": "postgraduate work",
+            "6": "refused to answer"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000034.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "SEX",
+        "VARDESC": "Gender",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "F": "female",
+            "M": "male"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000072.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk00",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 0)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000073.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk03",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 3)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000074.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk04",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 4)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000075.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk05",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 5)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000076.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk06",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 6)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000077.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk07",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 7)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000078.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk08",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 8)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000079.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk09",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 9)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000080.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk10",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 10)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000081.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk11",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 11)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000082.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk12",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 12)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000083.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "smk13",
+        "VARDESC": "Smoking status (based on having smoked for at least 6 months) (at follow-up year 13)",
+        "UNITS": null,
+        "ENCODED_VALUES": {
+            "0": "No Research Use Permitted: including HapMap, pedigree-linking, and genotype control subjects",
+            "1": "Never smoked",
+            "2": "Former smoker",
+            "3": "Current smoker"
+        }
+    },
+    {
+        "VARIABLE_ACC": "phv00000001.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "specnum",
+        "VARDESC": "Specimen number",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000084.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst00",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 0)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000085.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst03",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 3)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000086.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst04",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 4)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000087.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst05",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 5)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000088.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst06",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 6)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000089.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst07",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 7)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000090.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst08",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 8)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000091.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst09",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 9)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000092.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst10",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 10)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000093.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst11",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 11)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000094.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst12",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 12)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000095.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "syst13",
+        "VARDESC": "Sitting systolic blood pressure (at follow-up year 13)",
+        "UNITS": "mmHg",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000031.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "trt",
+        "VARDESC": "AREDS treatment",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000048.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight00",
+        "VARDESC": "Weight in pounds (at follow-up year 0)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000049.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight03",
+        "VARDESC": "Weight in pounds (at follow-up year 3)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000050.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight04",
+        "VARDESC": "Weight in pounds (at follow-up year 4)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000051.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight05",
+        "VARDESC": "Weight in pounds (at follow-up year 5)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000052.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight06",
+        "VARDESC": "Weight in pounds (at follow-up year 6)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000053.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight07",
+        "VARDESC": "Weight in pounds (at follow-up year 7)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000054.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight08",
+        "VARDESC": "Weight in pounds (at follow-up year 8)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000055.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight09",
+        "VARDESC": "Weight in pounds (at follow-up year 9)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000056.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight10",
+        "VARDESC": "Weight in pounds (at follow-up year 10)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000057.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight11",
+        "VARDESC": "Weight in pounds (at follow-up year 11)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000058.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight12",
+        "VARDESC": "Weight in pounds (at follow-up year 12)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000059.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "weight13",
+        "VARDESC": "Weight in pounds (at follow-up year 13)",
+        "UNITS": "pound",
+        "ENCODED_VALUES": null
+    },
+    {
+        "VARIABLE_ACC": "phv00000030.v1",
+        "DATASET_ACC": "pht000001.v1",
+        "DATASET_PARTICIPANT_SET": "1",
+        "STUDY_ACC": "phs000001.v1",
+        "DATASET_DESC": null,
+        "VARNAME": "ZZRCAMDC",
+        "VARDESC": "Baseline AMD category",
+        "UNITS": null,
+        "ENCODED_VALUES": null
+    }
+]

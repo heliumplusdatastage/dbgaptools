@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./datadict_v2.xsl"?><variable id="phv00404391.v1"><name>SUBJECT_ID</name><description>Subject ID</description><type>string</type></variable><variable id="phv00404392.v1"><name>CONSENT</name><description>Consent group as determined by DAC</description><type>encoded value</type><value code="1">Disease-Specific (Cancer, PUB, MDS) (DS-CA-PUB-MDS)</value></variable>
