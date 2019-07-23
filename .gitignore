@@ -43,4 +43,5 @@ vignettes/*.pdf
 *.knit.md
 
 # Ignore python cache directories
-/*__pycache__/
+__pycache__/
+ *.pyc
