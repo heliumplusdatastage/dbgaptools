@@ -47,7 +47,7 @@ def unpack_encoded_vals(variable_dict):
     while var_key in variable_dict:
         # Only add encoding if valid (i.e. of form 'NAME=VALUE')
         if not pd.isna(variable_dict[var_key]) and "=" in variable_dict[var_key]:
-            enc_val_dict[variable_dict[var_key].split("=")[0]] = variable_dict[var_key].split("=")[1]
+            enc_val_dict[variable_dict[var_key].split("=")[0]] = "=".join(variable_dict[var_key].split("=")[1:])
 
         # Increment count to move on to next numeric value column
         var_key = "X__%s" % i

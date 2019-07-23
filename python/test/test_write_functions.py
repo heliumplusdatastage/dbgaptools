@@ -61,3 +61,9 @@ def test_unpack_encoded_values(test_variable_dict, bad_variable_dict):
     bad_variable_dict.pop(const.VALUES_FIELD)
     with pytest.raises(KeyError):
         wf.unpack_encoded_vals(bad_variable_dict)
+
+def test_handles_equal_sign_encoded_val(test_variable_dict):
+    test_variable_dict["X__3"] = "4=>=20 or <=12"
+    test_variable_dict["X__4"] = "5= <=1 "
+    assert json.dumps(wf.unpack_encoded_vals(test_variable_dict)) == json.dumps({"0": "Derp", "1": "Nerp", "2": "Flerp",
+                                                                                 "4": ">=20 or <=12", "5": " <=1 "})
