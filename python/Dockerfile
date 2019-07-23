@@ -11,12 +11,14 @@ RUN mkdir /opt/dbgap_dd_to_json
 ADD constants.py /
 ADD read_functions.py /
 ADD write_functions.py /
+ADD check_functions.py /
 ADD dbgap_dd_to_json.py /
 
 # Move scripts to dbgap_dd_to_json folder
 RUN mv constants.py /opt/dbgap_dd_to_json
 RUN mv read_functions.py /opt/dbgap_dd_to_json
 RUN mv write_functions.py /opt/dbgap_dd_to_json
+RUN mv check_functions.py /opt/dbgap_dd_to_json
 RUN mv dbgap_dd_to_json.py /opt/dbgap_dd_to_json
 
 # Change permissions to make things exectuable
