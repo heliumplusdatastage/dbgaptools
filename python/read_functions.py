@@ -220,22 +220,33 @@ def read_dd_xml(filename):
     ordered_dd = pd.concat([ordered_dd, dd], axis=1, sort=False)
     return ordered_dd
 
+
 def read_dbgap_dd_xml(filename):
     # Set parent_dd_file to the filename of the XML data dictionary on disk
     logging.info("Parsing DbGaP data dictionary from XML file: {0}".format(filename))
-    xml_dd = ET.parse(filename)
+
+    # Try to read in XML file and raise error if not valid
+    try:
+        xml_dd = ET.parse(filename)
+    except ET.ParseError:
+        logging.error("Input file is not valid XML!")
+        raise
 
     # Get dataset, study, participant set ids
     dataset_node = xml_dd.findall('.')[0]
-    dataset_id = dataset_node.attrib['id']
-    study_id = dataset_node.attrib['study_id']
-    participant_set_id = dataset_node.attrib['participant_set']
+
+    dataset_id = get_node_attrib(dataset_node, 'id', node_type="Data Table")
+    study_id = get_node_attrib(dataset_node, 'study_id', node_type="Data Table")
+    participant_set_id = get_node_attrib(dataset_node, 'participant_set', node_type="Data Table")
 
     # Get dataset description
     dataset_desc = dataset_node.find("./description").text if dataset_node.find("./description") is not None else None
 
     # Select variable nodes
     variable_nodes = xml_dd.findall('variable')
+    if not variable_nodes:
+        logging.error("XML file contains no variables! Make sure XML is correclty formatted.")
+        raise DbGapMissingDataError("Data table contains no variables!")
 
     # Create a one-line data frame for each variable node
     required_nodes = {
@@ -252,11 +263,20 @@ def read_dbgap_dd_xml(filename):
     }
 
     df_list = []
+    variable_ids = []
     for variable_node in variable_nodes:
         df = {}
 
         # Get variable accession number
-        variable_id = variable_node.attrib['id']
+        variable_id = get_node_attrib(variable_node, 'id', node_type="Variable")
+
+        # Check to make sure no variable id duplicates
+        if variable_id in variable_ids:
+            logging.error("Duplicate variables with id '{0}'".format(variable_id))
+            raise DbGapInvalidDataError("Duplicate variables with id '{0}'".format(variable_id))
+
+        # Add to list of seen variable ids
+        variable_ids.append(variable_id)
 
         # Search for required nodes on each variable node and add them to the df dictionary.
         for key, value in required_nodes.items():
@@ -265,6 +285,13 @@ def read_dbgap_dd_xml(filename):
                 text = variable_node.find(xpath).text
             except Exception as _:
                 text = variable_node.find(xpath)
+
+            # Raise error if required field is missing
+            if text is None:
+                logging.error("Missing required variable field '{0}'".format(value))
+                raise DbGapMissingDataError("Missing required variable field '{0}'".format(value))
+
+            # Add variable and value to dictionary
             df[key] = text
 
         # Search for optional nodes on each variable node and add them to the df dictionary.
@@ -277,16 +304,23 @@ def read_dbgap_dd_xml(filename):
         # Find all the value nodes in each variable node. If it has multiple value nodes. Value with index 0 - VALUES
         # Value with index 1 - X__1
         child_value_nodes = variable_node.findall('.//value')
+        seen_codes = []
         for index, value in enumerate(child_value_nodes):
-            try:
-                value_string = str(value.attrib['code']) + '=' + value.text
-                if index == 0:
-                    name_string = 'VALUES'
-                else:
-                    name_string = 'X__' + str(index)
-                df[name_string] = value_string
-            except Exception as _:
-                pass
+            code = get_node_attrib(value, 'code', node_type="Value")
+            # Warn if variable contains duplicate code
+            if code in seen_codes:
+                logging.warning("Variable {0} contains duplicate coded field '{1}'".format(variable_id, code))
+
+            # Add code to list of codes already seen
+            seen_codes.append(code)
+
+            # Create new column for each code
+            value_string = str(code) + '=' + value.text
+            if index == 0:
+                name_string = const.VALUES_FIELD
+            else:
+                name_string = 'X__' + str(index)
+            df[name_string] = value_string
 
         # Add dataset, study, variable accession numbers
         df[const.DATASET_ACC_FIELD] = dataset_id
@@ -313,3 +347,15 @@ def read_dbgap_dd_xml(filename):
     # Concatenates the left over columns on dd dataframe to the ordered_dd dataframe. Return the ordered dataframe.
     ordered_dd = pd.concat([ordered_dd, dd], axis=1, sort=False)
     return ordered_dd
+
+
+class DbGapMissingDataError(BaseException):
+    pass
+
+class DbGapInvalidDataError(BaseException):
+    pass
+
+def get_node_attrib(node, attrib, node_type):
+    if attrib not in node.attrib:
+        raise DbGapMissingDataError("{0} missing the required '{1}' attribute!".format(node_type, attrib))
+    return node.attrib[attrib]
