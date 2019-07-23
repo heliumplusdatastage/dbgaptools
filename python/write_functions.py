@@ -5,6 +5,7 @@ import logging
 import csv
 
 import constants as const
+import check_functions as cf
 
 def write_dbgap(x, file="", study_name=None, phs=None,
                 DD=False, dstype="", generate_fn=False):
@@ -65,43 +66,35 @@ def write_dbgap(x, file="", study_name=None, phs=None,
     # write file
     x.to_csv(file, sep="\t", index=False, quoting=csv.QUOTE_NONE)
 
-def dbgap_dd_to_json(dd, required_cols, optional_cols=[], missing_val_char=None):
 
-    # Check to make sure all required columns present
-    errors = False
-    for required_col in required_cols:
-        if required_col not in dd.columns:
-            # Log missing column name to stderr
-            logging.error("Required column '{0}' missing from data "
-                          "dictionary input to dbgap_dd_to_json!".format(required_col))
-            errors = True
+def dbgap_dd_to_json(dd, output_cols, missing_val_char=None):
 
-    # Raise error if any required columns are missing from data dictionary input
-    if errors:
-        raise IOError("One or more required columns is missing from the data dictionary input! "
-                      "See log above for details.")
-
+    # Check to make sure values field exists
+    if not const.VALUES_FIELD in dd.columns:
+        raise cf.DbGapDataDictError("Required field {0} missing from DataDictionary!".format(const.VALUES_FIELD))
 
     # Convert pandas dataframe to list of dictionaries (one for each variable)
     dd_dict = dd.to_dict(orient="records")
 
     # Reformat each variable record and return final dictionary
-    return [__reformat_variable(variable, required_cols+optional_cols, missing_val_char) for variable in dd_dict]
+    return [get_variable_dict(variable, output_cols, missing_val_char) for variable in dd_dict]
 
-def __reformat_variable(variable_dict, required_cols, missing_val_char):
+
+def get_variable_dict(variable_dict, output_cols, missing_val_char):
     # Convencience function to converts variable into dictionary with encoded values unpacked and only required fields present
 
     # Unpack encoded values into separate dictionary
-    variable_dict[const.ENCODED_VALUE_FIELD] = __unpack_encoded_vals(variable_dict)
+    variable_dict[const.ENCODED_VALUE_FIELD] = unpack_encoded_vals(variable_dict)
 
     # Set any missing values to missing value character
     for key, val in variable_dict.items():
         variable_dict[key] = missing_val_char if pd.isnull(val) or pd.isna(val) or val in ["", None] else val
 
     # Filter out non-required columns
-    return { key: val for key,val in variable_dict.items() if key in required_cols }
+    return {key: val for key,val in variable_dict.items() if key in output_cols}
 
-def __unpack_encoded_vals(variable_dict):
+
+def unpack_encoded_vals(variable_dict):
     # Convenience function to unpacks encoded values for a variable into a single dictionary
     enc_val_dict = {}
 
