@@ -1,9 +1,10 @@
 import pandas as pd
 import xml.etree.ElementTree as ET
 import logging
+import re
+import os
 
 import constants as const
-
 
 class DbGapMissingDataError(BaseException):
     pass
@@ -16,6 +17,31 @@ def get_node_attrib(node, attrib, node_type):
     if attrib not in node.attrib:
         raise DbGapMissingDataError("{0} missing the required '{1}' attribute!".format(node_type, attrib))
     return node.attrib[attrib]
+
+
+def parse_id_and_version(id_string):
+    check_id_format(id_string)
+    version = id_string.split(".")[1].replace("v", "")
+    id_string = id_string.split(".")[0].replace("phs", "").replace("pht", "").replace("phv","")
+    return id_string, version
+
+
+def check_id_format(id_string):
+    variable_pattern = re.compile(r'ph[s|v|t][0-9]+\.v[0-9]')
+    if re.match(variable_pattern, id_string) is None:
+        logging.error(
+            "Invalid Dataset/Study/Variable id: '{0}' IDs must be of form 'ph[s/t/v][0-9]+.v[0-9]".format(id_string))
+        raise DbGapInvalidDataError(
+            "Invalid Dataset/Study/Variable id: '{0}' IDs must be of form 'ph[s/t/v][0-9]+.v[0-9]".format(id_string))
+
+
+def parse_study_name_from_filename(filename):
+    # Parse the study name from the xml filename if it exists. Return None if filename isn't right format to get id from
+    dbgap_file_pattern = re.compile(r'phs[0-9]+\.v[0-9]\.pht[0-9]+\.v[0-9]\.(.+)\.data_dict.*')
+    match = re.match(dbgap_file_pattern, filename)
+    if match is not None:
+        return match.group(1)
+    return None
 
 
 def read_dbgap_dd_xml(filename):
@@ -33,8 +59,14 @@ def read_dbgap_dd_xml(filename):
     dataset_node = xml_dd.findall('.')[0]
 
     dataset_id = get_node_attrib(dataset_node, 'id', node_type="Data Table")
+    dataset_id, dataset_vers = parse_id_and_version(dataset_id)
+
     study_id = get_node_attrib(dataset_node, 'study_id', node_type="Data Table")
+    study_id, study_vers = parse_id_and_version(study_id)
     participant_set_id = get_node_attrib(dataset_node, 'participant_set', node_type="Data Table")
+
+    # Get study name from filename
+    study_name = parse_study_name_from_filename(os.path.basename(filename))
 
     # Get dataset description
     dataset_desc = dataset_node.find("./description").text if dataset_node.find("./description") is not None else None
@@ -66,6 +98,7 @@ def read_dbgap_dd_xml(filename):
 
         # Get variable accession number
         variable_id = get_node_attrib(variable_node, 'id', node_type="Variable")
+        variable_id, variable_vers = parse_id_and_version(variable_id)
 
         # Check to make sure no variable id duplicates
         if variable_id in variable_ids:
@@ -124,9 +157,15 @@ def read_dbgap_dd_xml(filename):
         df[const.STUDY_ACC_FIELD] = study_id
         df[const.VARIABLE_ACC_FIELD] = variable_id
 
+        # Add dataset, study, variable version numbers
+        df[const.DATASET_VERSION_FIELD] = dataset_vers
+        df[const.STUDY_VERSION_FIELD] = study_vers
+        df[const.VARIABLE_VERSION_FIELD] = variable_vers
+
         # Add participant set and dataset desc fields
         df[const.DATASET_PART_SET_FIELD] = participant_set_id
         df[const.DATASET_DESC_FIELD] = dataset_desc
+        df[const.STUDY_NAME_FIELD] = study_name
 
         # Append the df dictionary of each variable node to the df list.
         df_list.append(df)
@@ -144,6 +183,3 @@ def read_dbgap_dd_xml(filename):
     # Concatenates the left over columns on dd dataframe to the ordered_dd dataframe. Return the ordered dataframe.
     ordered_dd = pd.concat([ordered_dd, dd], axis=1, sort=False)
     return ordered_dd
-
-
-
