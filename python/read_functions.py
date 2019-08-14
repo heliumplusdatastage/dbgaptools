@@ -66,7 +66,7 @@ def read_dbgap_dd_xml(filename):
     participant_set_id = get_node_attrib(dataset_node, 'participant_set', node_type="Data Table")
 
     # Get study name from filename
-    study_name = parse_study_name_from_filename(os.path.basename(filename))
+    dataset_name = parse_study_name_from_filename(os.path.basename(filename))
 
     # Get dataset description
     dataset_desc = dataset_node.find("./description").text if dataset_node.find("./description") is not None else None
@@ -163,9 +163,9 @@ def read_dbgap_dd_xml(filename):
         df[const.VARIABLE_VERSION_FIELD] = variable_vers
 
         # Add participant set and dataset desc fields
-        df[const.DATASET_PART_SET_FIELD] = participant_set_id
+        df[const.STUDY_PART_SET_FIELD] = participant_set_id
         df[const.DATASET_DESC_FIELD] = dataset_desc
-        df[const.STUDY_NAME_FIELD] = study_name
+        df[const.DATASET_NAME_FIELD] = dataset_name
 
         # Append the df dictionary of each variable node to the df list.
         df_list.append(df)
